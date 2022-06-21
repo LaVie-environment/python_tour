@@ -22,3 +22,27 @@ print('Radius is: ', c.radius)
 print('Area is: ', c.area)
 print('Circumference is: ', c.getCircumference())
 
+"""
+Example of Inheritance in Python
+"""
+
+class Animal:
+    def __init__(self):
+        print("Animal created")
+        
+    def whoAmI(self):
+        print("Animal")
+        
+    def eat(self):
+        print("Eating")
+        
+class Dog(Animal):
+    def __init__(self):
+        print("Dog created")
+        
+    def whoAmI(self):
+        Animal.__init__(self)
+        print("Dog")
+        
+    def bark(self):
+        print("Woof!")
