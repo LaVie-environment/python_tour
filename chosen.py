@@ -1,3 +1,5 @@
+#! /usr/bin/python
+
 class Circle:
     pi = 3.14
     
