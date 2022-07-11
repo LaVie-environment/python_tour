@@ -1,0 +1,18 @@
+#!/usr/bin/env
+
+def searchVowels():
+    vowels = set('aeiou')
+    anyword = raw_input("Please provide a word")
+    return vowels.intersection(set(anyword))
+
+searchVowels()
+
+
+
+def search4Letters():
+    vowels = set('aeiou')
+    anyletter = raw_input("Please provide a word")
+    return vowels.intersection(set(anyletter))
+
+search4Letters()
+

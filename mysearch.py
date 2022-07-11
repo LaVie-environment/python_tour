@@ -11,3 +11,13 @@ def searchVowels():
             return "It does not exist"
 
 searchVowels()
+
+"""
+An alternative is written below
+"""
+
+def searchVowels(phrase: str) -> set:
+    vowels = set('aeiou')
+    return vowels.intersection(set(phrase))
+
+searchVowels() #pass in a string as a parameter
