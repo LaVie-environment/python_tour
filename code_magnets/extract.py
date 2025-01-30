@@ -25,7 +25,8 @@ def get_coach_data(filename):
 
 james = get_coach_data('james2.txt')
 print(james['Name'] + "'s fastest times are: " + james['Times'])
-#sarah = get_coach_data('sarah.txt')
+sarah = get_coach_data('sarah.txt')
+print(sarah['Name'] + "'s fastest times are: " + sarah['Times'])
 #sarah_data = {}
 #sarah_data['Name'] = sarah.pop(0)
 #sarah_data['DOB'] = sarah.pop(0)
