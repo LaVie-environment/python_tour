@@ -30,7 +30,7 @@ print(sarah['Name'] + "'s fastest times are: " + sarah['Times'])
 julie2 = get_coach_data('julie2.txt')
 print(julie2['Name'] + "'s fastest times are: " + julie2['Times'])
 mikey2 = get_coach_data('mikey2.txt')
-print(james['Name'] + "'s fastest times are: " + mikey2['Times'])
+print(mikey2['Name'] + "'s fastest times are: " + mikey2['Times'])
 #sarah_data = {}
 #sarah_data['Name'] = sarah.pop(0)
 #sarah_data['DOB'] = sarah.pop(0)
