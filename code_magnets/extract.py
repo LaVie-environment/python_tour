@@ -12,13 +12,19 @@ def sanitize(time_string):
 
 
 class Athlete:
-    def __init__(self, a _name, a_dob=None, a_times=[]):
+    def __init__(self, a_name, a_dob=None, a_times=[]):
         self.name = a_name
         self.dob = a_dob
         self.times= a_times
 
     def top3(self):
         return(sorted(set([sanitize(t) for t in self.times]))[0:3])
+
+    def add_time(self, time_value):
+        self.times.append(time_value)
+
+    def add_times(self, list_of_times):
+        self.times.extend(list_of_times)
 
 def get_coach_data(filename):
     try:
@@ -31,13 +37,17 @@ def get_coach_data(filename):
         return(None)
 
 james = get_coach_data('james2.txt')
-print(james['Name'] + "'s fastest times are: " + james['Times'])
+print(james.name + "'s fastest times are: " + str(james.top3()))
+#print(james['Name'] + "'s fastest times are: " + james['Times'])
 sarah = get_coach_data('sarah.txt')
-print(sarah['Name'] + "'s fastest times are: " + sarah['Times'])
+print(sarah.name + "'s fastest times are: " + str(sarah.top3()))
+#print(sarah['Name'] + "'s fastest times are: " + sarah['Times'])
 julie2 = get_coach_data('julie2.txt')
-print(julie2['Name'] + "'s fastest times are: " + julie2['Times'])
+print(julie2.name + "'s fastest times are: " + str(julie2.top3()))
+#print(julie2['Name'] + "'s fastest times are: " + julie2['Times'])
 mikey2 = get_coach_data('mikey2.txt')
-print(mikey2['Name'] + "'s fastest times are: " + mikey2['Times'])
+print(mikey2.name + "'s fastest times are: " + str(mikey2.top3()))
+#print(mikey2['Name'] + "'s fastest times are: " + mikey2['Times'])
 #sarah_data = {}
 #sarah_data['Name'] = sarah.pop(0)
 #sarah_data['DOB'] = sarah.pop(0)
