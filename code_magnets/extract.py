@@ -36,6 +36,12 @@ def get_coach_data(filename):
         print('File error: ' + str(ioerr))
         return(None)
 
+vera = Athlete('Vera Vi')
+vera.add_time('1.31')
+print(vera.top3())
+vera.add_times(['2.22', "1-21", '2:22'])
+print(vera.top3())
+
 james = get_coach_data('james2.txt')
 print(james.name + "'s fastest times are: " + str(james.top3()))
 #print(james['Name'] + "'s fastest times are: " + james['Times'])
